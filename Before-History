@@ -1,0 +1,29 @@
+## 🧾 Commit History (Chronological)
+
+| Commit Hash | Date | Branch | Message |
+|-------------|------|--------|---------|
+| c06299be16 | 2025-07-08 | main | 📝 docs: Add README.md |
+| b3c3da9a15 | 2025-07-08 | main | ✨ feat(init): BackEnd Project init |
+| b857b776aa | 2025-07-09 | (local) | ✅ test: Server Start Console |
+| 29c02be808 | 2025-07-09 | (local) | 🐳 chore(docker): basic Docker setup |
+| 601af0640e | 2025-07-10 | (local) | 🔧 chore: add Logger and basic setting |
+| 50fed53998 | 2025-07-10 | feature/OAuth-Google | 🔧 chore(auth): install JWT, OAuth packages and set up modules |
+| 39c0319373 | 2025-07-10 | feature/OAuth-Google | ✨ feat(auth): implement Google OAuth authentication with JWT integration |
+| bebf5df63c | 2025-07-10 | feature/OAuth-Google | ✨ feat(auth): add login success and failure response examples |
+| fd4acb588a | 2025-07-10 | main | 🔀 Merge pull request #1 from HP657/feature/OAuth-Google |
+| cba262f56c | 2025-07-11 | feature/JWT | ✨ feat(auth): add JwtStrategy for JWT validation and protect routes |
+| 40157a4349 | 2025-07-11 | feature/OAuth-Github | 🔧 chore: install GitHub OAuth module |
+| 69e4602883 | 2025-07-11 | feature/OAuth-Github | ✨ feat(auth): implement GitHub OAuth login with passport-github2 |
+| f6fcb213d2 | 2025-07-11 | feature/Auth | ♻️ refactor(auth): unify OAuth payload structure across providers |
+| 6a3df3f024 | 2025-07-11 | feature/OAuth-Google | ♻️ refactor(auth): apply unified OAuth payload structure for Google |
+| 5c7af56aec | 2025-07-11 | main | 🔀 Merge pull request #2 from HP657/feature/OAuth-Google |
+| 5e9e1acdda | 2025-07-11 | main | 🔀 Merge pull request #3 from HP657/feature/Auth |
+| afbe0bee5a | 2025-07-11 | feature/OAuth-Kakao | 🔧 chore: install Kakao OAuth module |
+| fa5f8c90aa | 2025-07-11 | feature/OAuth-Kakao | ✨ feat(auth): implement Kakao OAuth login with passport-kakao |
+| 283f4e161f | 2025-07-11 | main | 🔀 Merge pull request #4 from HP657/feature/OAuth-Kakao |
+| 0c793fcd19 | 2025-07-11 | feature/OAuth-Naver | 🔧 chore: install Naver OAuth module |
+| 4dd02b7747 | 2025-07-11 | feature/OAuth-Naver | ✨ feat(auth): implement Naver OAuth login with passport-naver-v2 |
+| 88c4f4b932 | 2025-07-11 | main | 🔀 Merge pull request #5 from HP657/feature/OAuth-Naver |
+| 43ff50f965 | 2025-07-11 | main | 🔀 Merge pull request #6 from HP657/feature/Auth |
+| 417b8017e7 | 2025-07-12 | feature/Auth | ♻️ refactor(auth): combine firstName and lastName as userName |
+| c0d04dff61 | 2025-07-12 | feature/OAuth-Google, feature/Auth | ✨ fix(user): implement user creation and database saving logic |
