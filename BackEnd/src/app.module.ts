@@ -6,6 +6,7 @@ import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ContentModule } from './content/content.module';
 import * as process from 'node:process';
 
 @Module({
@@ -26,6 +27,7 @@ import * as process from 'node:process';
     }),
     UserModule,
     AuthModule,
+    ContentModule,
   ],
   controllers: [AppController],
   providers: [AppService],
