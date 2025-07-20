@@ -1,7 +1,7 @@
 services:
   backend:
     build:
-      context: .
+      context: ./BackEnd
       dockerfile: Dockerfile
     container_name: premiumy-backend
     ports:
@@ -10,7 +10,7 @@ services:
       mysql:
         condition: service_healthy
     volumes:
-      - .:/usr/src/app
+      - ./BackEnd:/usr/src/app 
       - /usr/src/app/node_modules
     env_file:
       - .env
@@ -31,5 +31,17 @@ services:
       interval: 2s
       timeout: 2s
       retries: 10
+
+  frontend:
+    build:
+      context: ./FrontEnd  
+      dockerfile: Dockerfile
+    container_name: premiumy-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./FrontEnd:/usr/src/app
+      - /usr/src/app/node_modules
+
 volumes:
   db-data:
