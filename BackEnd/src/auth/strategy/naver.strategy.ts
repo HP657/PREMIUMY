@@ -29,7 +29,7 @@ export class NaverStrategy extends PassportStrategy(Strategy, 'naver') {
       nickname: nickname || '',
     };
 
-    let foundUser = await this.userService.findBySocialIdAndProvider(user.socialId, user.provider);
+    let foundUser = await this.userService.findByProviderSocialId(user.provider, user.socialId);
 
     if (!foundUser) {
       foundUser = await this.userService.createUser(user);

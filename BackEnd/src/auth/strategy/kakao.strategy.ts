@@ -27,7 +27,7 @@ export class KakaoStrategy extends PassportStrategy(Strategy, 'kakao') {
       nickname: _json.properties?.nickname || '',
     };
 
-    let foundUser = await this.userService.findBySocialIdAndProvider(user.socialId, user.provider);
+    let foundUser = await this.userService.findByProviderSocialId(user.provider, user.socialId);
 
     if (!foundUser) {
       foundUser = await this.userService.createUser(user);

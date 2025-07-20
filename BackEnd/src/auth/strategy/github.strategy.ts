@@ -13,7 +13,7 @@ export class GithubStrategy extends PassportStrategy(Strategy, 'github') {
     super({
       clientID: process.env.GITHUB_CLIENT_ID!,
       clientSecret: process.env.GITHUB_SECRET!,
-      callbackURL: 'http://localhost:3000/apiauth/github/redirect',
+      callbackURL: 'http://localhost:3000/api/auth/github/redirect',
       scope: ['user:email'],
     });
   }
@@ -30,7 +30,7 @@ export class GithubStrategy extends PassportStrategy(Strategy, 'github') {
       nickname: username ?? '',
     };
 
-    let foundUser = await this.userService.findBySocialIdAndProvider(user.socialId, user.provider);
+    let foundUser = await this.userService.findByProviderSocialId(user.provider, user.socialId);
 
     if (!foundUser) {
       foundUser = await this.userService.createUser(user);
