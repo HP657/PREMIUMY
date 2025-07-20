@@ -51,6 +51,7 @@ PREMIUMY는 OAuth2 소셜 로그인을 통해 다양한 텍스트 기반 자료�
 - Google, Kakao, GitHub, **Naver** OAuth2 로그인 지원  
 - JWT 발급 (Access + Refresh Token)  
 - NestJS Guard + Role Decorator 기반 권한 제어  
+- HttpOnly 쿠키를 통한 안전한 토큰 저장 및 자동 인증 처리
 - 유료 콘텐츠 접근 시 결제 여부 확인 후 열람 허용  
 
 ---
