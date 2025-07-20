@@ -7,7 +7,6 @@ export class UserController {
   constructor(private readonly userService: UserService) {}
 
   @Get('info')
-  @UseGuards(AuthGuard('jwt'))
   async userInfo(@Req() req) {
     const { provider, socialId } = req.user;
     const user = await this.userService.findByProviderSocialId(provider, socialId);
