@@ -11,11 +11,8 @@ export class UserService {
     private readonly userRepository: Repository<User>,
   ) {}
 
-  async findBySocialIdAndProvider(
-    socialId: string,
-    provider: string,
-  ): Promise<User | null> {
-    return this.userRepository.findOne({ where: { socialId, provider } });
+  async findByProviderSocialId(provider: string, socialId: string) {
+    return this.userRepository.findOneBy({ provider, socialId });
   }
 
   async createUser(user: CreateUserDto): Promise<User> {
