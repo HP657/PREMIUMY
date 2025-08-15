@@ -1,17 +1,13 @@
 <script lang="ts">
-    import { goto } from "$app/navigation";
-    import api from "$lib/api";
+    import { logout } from '$lib/api';
+    import { goto } from '$app/navigation';
+    export let setUser: (u: null) => void;
 
-
-    async function logout() {
-    try {
-        await api.post('/auth/logout');
+    async function handleLogout() {
+        await logout();
+        setUser(null);
         goto('/login');
-    } catch (error) {
-        alert('Logout failed. Please try again.');
     }
-    }
-
 </script>
 
-<button on:click={logout}>Logout</button>
+<button onclick={handleLogout}>로그아웃</button>
