@@ -25,6 +25,7 @@
 
         <div class="space-x-6 font-semibold">
             <button class="hover:text-gray-300" onclick={() => goto('/resources')}>자료</button>
+            <button class="hover:text-gray-300" onclick={() => goto('/payed/resources')}>유료자료</button>
             <button class="hover:text-gray-300" onclick={() => goto('/notice')}>공지사항</button>
             <button class="hover:text-gray-300" onclick={() => goto('/profile')}>내 자료</button>
         </div>
@@ -36,9 +37,6 @@
                 <LogoutButton {setUser} />
             {:else}
                 <button class="hover:text-gray-300 font-semibold" onclick={() => goto('/login')}>로그인</button>
-                <button class="bg-white text-black px-4 py-1 rounded hover:bg-gray-200 transition font-semibold" onclick={() => goto('/signup')}>
-                    회원가입
-                </button>
             {/if}
 
 
