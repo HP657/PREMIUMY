@@ -17,7 +17,7 @@
 <div class="min-h-screen flex flex-col">
     <nav class="fixed top-0 left-0 w-full z-50 bg-black text-white px-8 py-4 flex justify-between items-center shadow">
         <button
-                class="flex items-center font-bold text-xl bg-transparent border-0 cursor-pointer"
+                class="flex items-center font-bold text-xl bg-transparent border-0 cursor-pointer select-none"
                 onclick={() => goto('/')}
         >
             PREMIUMY
@@ -25,10 +25,8 @@
 
         <div class="space-x-6 font-semibold">
             <button class="hover:text-gray-300" onclick={() => goto('/resources')}>자료</button>
-            <button class="hover:text-gray-300" onclick={() => goto('/categories')}>카테고리</button>
-            <button class="hover:text-gray-300" onclick={() => goto('/ranking')}>인기 자료</button>
-            <button class="hover:text-gray-300" onclick={() => goto('/notices')}>공지사항</button>
-            <button class="hover:text-gray-300" onclick={() => goto('/my-resources')}>내 자료</button>
+            <button class="hover:text-gray-300" onclick={() => goto('/notice')}>공지사항</button>
+            <button class="hover:text-gray-300" onclick={() => goto('/profile')}>내 자료</button>
         </div>
 
 
